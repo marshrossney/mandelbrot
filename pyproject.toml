@@ -1,0 +1,30 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "mandelbrot"
+version = "0.1.0"
+description = "Visualisations of escape-time fractals, chiefly the Mandelbrot set"
+authors = ["marshrossney <17361029+marshrossney@users.noreply.github.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+numpy = "^1.23.1"
+matplotlib = "^3.5.2"
+ipython = "^8.4.0"
+sympy = "^1.10.1"
+tqdm = "^4.64.0"
+jupyterlab = "^3.4.3"
+ipywidgets = "^7.7.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+
+[tool.poetry.scripts]
+mandel = "mandelbrot.scripts.mandelbrot:main"
+julia = "mandelbrot.scripts.julia:main"
+
+[tool.black]
+line-length = 79
+target-version = ["py39"]

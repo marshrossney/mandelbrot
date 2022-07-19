@@ -3,3 +3,5 @@ __pycache__/
 .nox
 pages/_build
 .ipynb_checkpoints/
+*.png
+*.gif
