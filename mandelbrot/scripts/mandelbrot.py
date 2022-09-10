@@ -14,7 +14,10 @@ def mandelbrot(
     ).get_figure(cmap)
 
     if output:
-        fig.savefig(output)
+        fig.gca().set_axis_off()
+        fig.gca().set_title("")
+        fig.tight_layout()
+        fig.savefig(output, dpi=200)
     else:
         plt.show()
 

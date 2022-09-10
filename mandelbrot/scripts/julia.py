@@ -22,7 +22,10 @@ def main(arg_str=None):
     fig = Julia(c, centre, args.extent, args.resolution).get_figure(args.cmap)
 
     if args.output:
-        fig.savefig(args.output)
+        fig.gca().set_axis_off()
+        fig.gca().set_title("")
+        fig.tight_layout()
+        fig.savefig(args.output, dpi=300)
     else:
         plt.show()
 
